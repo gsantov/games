@@ -1,0 +1,26 @@
+.home-card{
+    width: 360px;
+}
+
+.home-card img {
+    height: 150px;
+    object-fit: cover;
+    object-position: 0% 0%;
+}
+
+.home-background{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../assets/images/home/background.jpg");
+    background-color: #cccccc;
+    background-size: cover;
+    padding: 8px;
+}
+
+body{
+    margin: 0px;
+}
+
+.card-footer-button {
+    width: 100%;
+}
