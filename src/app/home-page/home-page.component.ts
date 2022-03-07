@@ -14,7 +14,7 @@ export class HomePageComponent implements OnInit {
   }
 
   playMemory(){
-    this.router.navigate(['memory-main'])
+    this.router.navigate(['memory/main'])
   }
 
 }

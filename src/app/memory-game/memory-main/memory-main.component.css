@@ -1,0 +1,15 @@
+:host ::ng-deep .memory-main-card{
+    width: 400px;
+    margin: auto;
+    margin: 15px;
+}
+
+:host ::ng-deep .memory-main-card img {
+    height: 150px;
+    object-fit: cover;
+    object-position: 0% 0%;
+}
+
+:host ::ng-deep .home-background p-inputNumber {
+    width: 100%;
+}

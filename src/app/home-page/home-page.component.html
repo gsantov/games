@@ -1,11 +1,12 @@
-<div class="home-background">
+<div class="home-background" style="background-image: url('../../assets/images/home/background.jpg')">
     <p-card header="Memory game" styleClass="p-card-shadow home-card">
         <ng-template pTemplate="header">
             <img alt="Card" src="assets/images/home/memory.jpg">
         </ng-template>
         <p>Juego de memoria en que se tiene que encontrar los pares para las imagenes</p>
         <ng-template pTemplate="footer">
-            <p-button styleClass="card-footer-button" label="Play" icon="pi pi-check" (onClick)="playMemory()"></p-button>
+            <p-button styleClass="card-footer-button" label="Play" icon="pi pi-check" (onClick)="playMemory()">
+            </p-button>
         </ng-template>
     </p-card>
 </div>

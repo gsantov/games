@@ -1,5 +1,7 @@
 .home-card{
     width: 360px;
+    margin: auto;
+    margin: 15px;
 }
 
 .home-card img {
@@ -11,10 +13,16 @@
 .home-background{
     width: 100vw;
     height: 100vh;
-    background-image: url("../../assets/images/home/background.jpg");
+    background-blend-mode: overlay;
     background-color: #cccccc;
     background-size: cover;
     padding: 8px;
+    background-repeat: repeat;
+/* Centrar div */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 body{

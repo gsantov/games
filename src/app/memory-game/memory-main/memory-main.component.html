@@ -1,0 +1,40 @@
+<div class="home-background" style="background-image: url('../../assets/images/home/background.jpg')">
+    <p-card header="Configuration" styleClass="p-card-shadow home-card">
+        <ng-template pTemplate="header">
+            <img alt="Card" src="assets/images/home/memory.jpg">
+        </ng-template>
+        <div class="grid">
+            <!-- <div class="field col-12">
+                <label for="horizontal">Number of players</label>
+                <p-inputNumber [(ngModel)]="numberOfPlayers" [showButtons]="true" buttonLayout="horizontal" inputId="horizontal"
+                    spinnerMode="horizontal" [step]="1" decrementButtonClass="p-button-danger"
+                    incrementButtonClass="p-button-success" incrementButtonIcon="pi pi-plus"
+                    decrementButtonIcon="pi pi-minus" [min]="1" [max]="1" [style]="{'width': '100%'}"
+                    [allowEmpty]="false" [disabled]="true" >
+                </p-inputNumber>
+            </div> -->
+
+            <div class="field col-6">
+                <label for="rowsI">Number of players</label>
+                <p-inputNumber [(ngModel)]="numberOfPlayers" [showButtons]="true" buttonLayout="vertical" spinnerMode="vertical" inputId="vertical"
+                decrementButtonClass="p-button-danger"
+                incrementButtonClass="p-button-success" incrementButtonIcon="pi pi-plus"
+                decrementButtonIcon="pi pi-minus" [step]="1" [min]="1" [max]="1"  [style]="{'width': '100%'}" [readonly]="true">
+                </p-inputNumber>
+            </div>
+
+            <div class="field col-6">
+                <label for="rowsI">Cards to play</label>
+                <p-inputNumber [(ngModel)]="memoryService.amountOfCards" [showButtons]="true" buttonLayout="vertical" spinnerMode="vertical" inputId="vertical"
+                decrementButtonClass="p-button-danger" (keydown)="disableInput($event)"
+                incrementButtonClass="p-button-success" incrementButtonIcon="pi pi-plus"
+                decrementButtonIcon="pi pi-minus" [step]="2" [min]="10" [max]="40"  [style]="{'width': '100%'}">
+                </p-inputNumber>
+            </div>
+        </div>
+        <ng-template pTemplate="footer">
+            <p-button styleClass="card-footer-button" label="Play" (onClick)="beginGame()">
+            </p-button>
+        </ng-template>
+    </p-card>
+</div>

@@ -4,21 +4,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import {CardModule} from 'primeng/card';
+import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
-import { MemoryGameComponent } from './memory-game/memory-game.component';
+import { MemoryGameModule } from './memory-game/memory-game.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent,
-    MemoryGameComponent
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
+    MemoryGameModule,
+
     AppRoutingModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
