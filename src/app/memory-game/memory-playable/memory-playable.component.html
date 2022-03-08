@@ -1,1 +1,9 @@
-<p>memory-playable works!</p>
+<div class="game-container">
+  <mat-grid-list cols="{{gridCols}}" rowHeight="1:1">
+    <mat-grid-tile *ngFor="let image of images" class="play-card">
+      <div class="play-card-container">
+        <img [src]="image.status === FOLDED ? image.back : image.imageUrl" alt="" (click)="clicCard(image)">
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

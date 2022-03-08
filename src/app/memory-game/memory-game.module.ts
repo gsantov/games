@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MemoryMainComponent } from './memory-main/memory-main.component';
 import { MemoryPlayableComponent } from './memory-playable/memory-playable.component';
 import { MemoryScoreComponent } from './memory-score/memory-score.component';
 import { AppRoutingModule } from '../app-routing.module';
@@ -9,12 +8,17 @@ import { ButtonModule } from 'primeng/button';
 import { InputNumberModule } from 'primeng/inputnumber';
 import {InputTextModule} from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
+import { FinishGameComponent } from './memory-playable/finish-game/finish-game.component';
+
 
 @NgModule({
   declarations: [
-    MemoryMainComponent,
     MemoryPlayableComponent,
-    MemoryScoreComponent
+    MemoryScoreComponent,
+    FinishGameComponent
   ],
   imports: [
     CommonModule,
@@ -23,10 +27,12 @@ import { FormsModule } from '@angular/forms';
     ButtonModule, 
     InputNumberModule,
     InputTextModule,
-    FormsModule
+    FormsModule,
+    MatGridListModule,
+    MatDialogModule,
+    MatButtonModule
   ], 
   exports: [
-    MemoryMainComponent,
     MemoryPlayableComponent,
     MemoryScoreComponent
   ]

@@ -1,0 +1,25 @@
+/* :host body {
+    background-image: url('../../../assets/images/home/background.jpg');
+    background-blend-mode: overlay;
+    background-color: #cccccc;
+    background-size: cover;
+} */
+
+.play-card img {
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px #585858;
+    width: 98%;
+    height: 98%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.play-card-container {
+    height: 100%;
+    width: 100%;
+    padding: 7px;
+}
+
+.game-container {
+    padding: 20px;
+}

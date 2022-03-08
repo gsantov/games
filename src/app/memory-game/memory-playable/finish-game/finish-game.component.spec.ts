@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MemoryMainComponent } from './memory-main.component';
+import { FinishGameComponent } from './finish-game.component';
 
-describe('MemoryMainComponent', () => {
-  let component: MemoryMainComponent;
-  let fixture: ComponentFixture<MemoryMainComponent>;
+describe('FinishGameComponent', () => {
+  let component: FinishGameComponent;
+  let fixture: ComponentFixture<FinishGameComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MemoryMainComponent ]
+      declarations: [ FinishGameComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MemoryMainComponent);
+    fixture = TestBed.createComponent(FinishGameComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

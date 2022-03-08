@@ -1,0 +1,8 @@
+<div class="fininsh-dialog-container">
+    <h1 mat-dialog-title>Game finished</h1>
+    <div mat-dialog-content>Congratulations!! You finish the game in <span *ngIf="minutes>0">{{minutes}} minutes and</span> {{seconds}} seconds</div>
+    <!-- <div mat-dialog-content>Congratulations, you finish the game in {{asdasd | date:'H:mm:ss':'UTC'}}</div> -->
+    <div mat-dialog-actions>
+      <button mat-button mat-dialog-close class="go-home-btn">Go home</button>
+    </div>
+</div>

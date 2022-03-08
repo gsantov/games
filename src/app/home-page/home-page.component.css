@@ -5,19 +5,16 @@
 }
 
 .home-card img {
-    height: 150px;
+    height: 134px;
     object-fit: cover;
-    object-position: 0% 0%;
+    object-position: 0% 5%;
 }
 
 .home-background{
     width: 100vw;
     height: 100vh;
-    background-blend-mode: overlay;
-    background-color: #cccccc;
-    background-size: cover;
     padding: 8px;
-    background-repeat: repeat;
+    /* background-repeat: repeat; */
 /* Centrar div */
     display: flex;
     flex-wrap: wrap;
@@ -31,4 +28,26 @@ body{
 
 .card-footer-button {
     width: 100%;
+}
+
+:host ::ng-deep .memory-main-card{
+    width: 400px;
+    margin: auto;
+    margin: 15px;
+}
+
+:host ::ng-deep .memory-main-card img {
+    height: 150px;
+    object-fit: cover;
+    object-position: 0% 0%;
+}
+
+:host ::ng-deep .home-background p-inputNumber input{
+    width: 100%;
+    text-align: center;
+}
+
+.game-description {
+    height: 150px;
+    overflow: auto;
 }

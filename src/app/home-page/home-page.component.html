@@ -1,12 +1,62 @@
-<div class="home-background" style="background-image: url('../../assets/images/home/background.jpg')">
-    <p-card header="Memory game" styleClass="p-card-shadow home-card">
+<div class="home-background">
+    <p-card header="{{showMemoryConfig ? 'Memory game configuration' : 'Memory'}}" styleClass="p-card-shadow home-card">
         <ng-template pTemplate="header">
-            <img alt="Card" src="assets/images/home/memory.jpg">
+            <img *ngIf="!memoryService.isMobile" alt="Card" src="assets/images/home/memory.jpg">
+            <img *ngIf="memoryService.isMobile && !showMemoryConfig" alt="Card" src="assets/images/home/memory.jpg">
         </ng-template>
-        <p>Juego de memoria en que se tiene que encontrar los pares para las imagenes</p>
-        <ng-template pTemplate="footer">
-            <p-button styleClass="card-footer-button" label="Play" icon="pi pi-check" (onClick)="playMemory()">
-            </p-button>
+        <ng-template pTemplate="content">
+            <div *ngIf="!showMemoryConfig">
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Descripion and instructions
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div class="game-description">
+                            {{memoryDescription}}
+                        </div>
+                    </mat-expansion-panel>
+                </mat-accordion>
+                <br>
+                <p-button styleClass="card-footer-button" label="Play" (onClick)="playMemory()">
+                </p-button>
+            </div>
+
+            <div *ngIf="showMemoryConfig">
+                <div class="grid">
+                    <div class="field col-6">
+                        <label for="rowsI">Number of players</label>
+                        <p-inputNumber [(ngModel)]="numberOfPlayers" [showButtons]="true"
+                            buttonLayout="{{memoryService.isMobile ? 'horizontal' : 'vertical'}}" spinnerMode="vertical"
+                            inputId="vertical" decrementButtonClass="p-button-danger"
+                            incrementButtonClass="p-button-success" incrementButtonIcon="pi pi-plus"
+                            decrementButtonIcon="pi pi-minus" [step]="1" [min]="1" [max]="1" [style]="{'width': '100%'}"
+                            [readonly]="true">
+                        </p-inputNumber>
+                    </div>
+                    <div class="field col-6">
+                        <label for="rowsI">Cards to play</label>
+                        <p-inputNumber [(ngModel)]="memoryService.amountOfCards" [showButtons]="true"
+                            buttonLayout="{{memoryService.isMobile ? 'horizontal' : 'vertical'}}" spinnerMode="vertical"
+                            inputId="vertical" decrementButtonClass="p-button-danger" (keydown)="disableInput($event)"
+                            incrementButtonClass="p-button-success" incrementButtonIcon="pi pi-plus"
+                            decrementButtonIcon="pi pi-minus" [step]="2" [min]="10" [max]="maxCards"
+                            [style]="{'width': '100%'}">
+                        </p-inputNumber>
+                    </div>
+                </div>
+                <div class="grid">
+                    <p-button class="col-12" styleClass="card-footer-button" label="Start"
+                        (onClick)="beginMemoryGame()">
+                    </p-button>
+                    <p-button class="col-12" styleClass="card-footer-button p-button-danger" label="Cancel"
+                        (onClick)="showMemoryConfig = false">
+                    </p-button>
+                </div>
+
+            </div>
+
         </ng-template>
     </p-card>
 </div>
