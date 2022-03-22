@@ -1,5 +1,6 @@
 # [START runtime]
 runtime: python27
+service: games
 threadsafe: yes
 # [END runtime]
 handlers:
