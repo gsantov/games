@@ -7,6 +7,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent },
   { path: 'memory/play', component: MemoryPlayableComponent },
+  // otherwise redirect to home
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({
